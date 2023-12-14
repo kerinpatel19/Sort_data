@@ -246,51 +246,40 @@ int main(){
     if (remove("Memory.txt") != 0) {
         perror("Error deleting file");
     }
-    
     print_menu();
-
-    while(true){
+    int choice;
+    while (true) {
         cout << "Enter your choice (1, 2, 3, or 4): ";
 
-        int choice;
-        cin >> choice;
-
-        // Check if the input is a valid integer
-        if (cin.good()) {
+        if (cin >> choice) {
             // Input is a valid integer
             if (choice >= 1 && choice <= 4) {
-                // Valid choice, exit the loop
+                // Valid choice
                 if (choice == 1) {
                     string wordToFind;
                     cout << "Enter the word to look up: ";
                     cin >> wordToFind;
                     LookUpWord(wordToFind);
-                    print_menu();
-                    
-                }
-                else if (choice == 2) {
+                } else if (choice == 2) {
                     PrintAllItems();
-                    print_menu();
-        
-                }
-                else if (choice == 3) {
+                } else if (choice == 3) {
                     PrintAllItemsVolume();
-                    print_menu();
-                }
-                else if (choice == 4) {
+                } else {
                     cout << "Goodbye" << endl;
-                    break;
+                    break;  // Exit the loop for a valid choice (4)
                 }
-                else {
-                cout << "Invalid choice." << endl;
+
+                // Print the menu for valid choices (1, 2, 3)
                 print_menu();
-                cout << "Choice :-";
-                cin >> choice;
-                }
-            }
-            else {
+            } else {
                 cout << "Invalid choice. Please enter 1, 2, 3, or 4." << endl;
             }
+        } else {
+            cout << "Invalid input. Please enter a valid integer." << endl;
+            // Clear the error state of cin
+            cin.clear();
+            // Discard any remaining characters in the input buffer
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
     }
 
