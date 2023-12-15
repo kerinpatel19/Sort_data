@@ -10,7 +10,7 @@
 • Give an example from the readings of a standard that supports ethical programming. How does it do so?
 
 ⁃ “your knowledge gives you the privilege and the responsibility to say no when no is the answer. When the answer is no, we are the only ones who can say that. We're the only ones who know.” From CS-210 UncleBob Expecting Professionalism Kuppelsalen, Copenhagen (CC) on YouTube. 
-⁃ I deliver its very important to say no when the you don’t feel comfortable doing than saying no is the right thing to do. 
+⁃ I Believe its very important to say no when the you don’t feel comfortable doing than saying no is the right thing to do. 
 
 
 
